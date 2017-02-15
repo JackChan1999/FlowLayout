@@ -1,13 +1,13 @@
 package com.github.flowlayout.view;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.heima.googleplay.utils.UIUtils;
+import com.github.flowlayout.util.Utils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FlowLayout66 extends ViewGroup {
 	public static final int DEFAULT_SPACING = 20;
@@ -51,7 +51,7 @@ public class FlowLayout66 extends ViewGroup {
 	}
 
 	private void requestLayoutInner() {
-		UIUtils.runInMainThread(new Runnable() {
+		Utils.runInMainThread(new Runnable() {
 			@Override
 			public void run() {
 				requestLayout();

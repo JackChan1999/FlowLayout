@@ -31,8 +31,8 @@ import java.util.List;
  **/
 public class Flowlayout52 extends ViewGroup {
 
-	private int horizontolSpacing = Utils.dip2px(13,getContext());
-	private int verticalSpacing = Utils.dip2px(13,getContext());
+	private int horizontolSpacing = Utils.dip2px(13);
+	private int verticalSpacing = Utils.dip2px(13);
 	private int width;
 	private int useWidth=0;// 当前行使用的宽度
 	private Line currentline;// 当前的行

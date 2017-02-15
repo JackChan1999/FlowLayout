@@ -14,8 +14,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.github.flowlayout.util.Utils;
 import com.github.flowlayout.view.FlowLayout;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 import java.util.Random;
@@ -72,14 +76,14 @@ public class FlowActivity extends AppCompatActivity {
         mScrollView.setVerticalScrollBarEnabled(false);
         mFlowLayout = new FlowLayout(this);
 
-        int padding = UIUtil.dip2px(15);
-        mFlowLayout.setPadding(UIUtil.dip2px(10), padding, UIUtil.dip2px(10), padding);
-        mFlowLayout.setSpace(UIUtil.dip2px(10), UIUtil.dip2px(15));
+        int padding = Utils.dip2px(15);
+        mFlowLayout.setPadding(Utils.dip2px(10), padding, Utils.dip2px(10), padding);
+        mFlowLayout.setSpace(Utils.dip2px(10), Utils.dip2px(15));
         for (final String data : mData) {
 
             TextView textView = new TextView(this);
-            int tvPadding = UIUtil.dip2px(10);
-            textView.setPadding(UIUtil.dip2px(15), tvPadding, UIUtil.dip2px(15), tvPadding);
+            int tvPadding = Utils.dip2px(10);
+            textView.setPadding(Utils.dip2px(15), tvPadding, Utils.dip2px(15), tvPadding);
             textView.setGravity(Gravity.CENTER);
             textView.setTextSize(16);
             textView.setText(data);
@@ -94,12 +98,12 @@ public class FlowActivity extends AppCompatActivity {
 
             //设置shape
             GradientDrawable normalDrawable = new GradientDrawable();
-            normalDrawable.setCornerRadius(UIUtil.dip2px(6));
+            normalDrawable.setCornerRadius(Utils.dip2px(6));
             normalDrawable.setColor(argb);
 
             GradientDrawable pressedDrawable = new GradientDrawable();
             pressedDrawable.setColor(Color.DKGRAY);
-            pressedDrawable.setCornerRadius(UIUtil.dip2px(5));
+            pressedDrawable.setCornerRadius(Utils.dip2px(5));
 
 
             //设置选择器selector
@@ -112,7 +116,7 @@ public class FlowActivity extends AppCompatActivity {
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ToastUtil.toast(data);
+                    Toast.makeText(FlowActivity.this, data,Toast.LENGTH_SHORT);
                 }
             });
             mFlowLayout.addView(textView);
