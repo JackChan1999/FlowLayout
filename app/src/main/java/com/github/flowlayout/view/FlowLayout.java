@@ -1,4 +1,4 @@
-package com.github.flowlayout;
+package com.github.flowlayout.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

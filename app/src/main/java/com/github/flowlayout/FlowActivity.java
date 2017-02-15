@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.github.flowlayout.view.FlowLayout;
+
 import java.util.List;
 import java.util.Random;
 /**
