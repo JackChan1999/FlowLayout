@@ -1,4 +1,29 @@
-# FlowLayout
-流式布局
+# FlowLayout 流式布局
 
-<img src="http://img.blog.csdn.net/20170117141326104?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYXhpMjk1MzA5MDY2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="400"/>
+<img src="https://github.com/JackChen1999/FlowLayout/blob/master/art/flowlayout.jpg" width="400"/>
+
+# 关于我
+
+- Email：<815712739@qq.com>
+- CSDN博客：[Allen Iverson](http://blog.csdn.net/axi295309066)
+- 新浪微博：[AndroidDeveloper](http://weibo.com/u/1848214604?topnav=1&amp;wvr=6&amp;topsug=1&amp;is_all=1)
+
+# License
+
+    Copyright 2015 AllenIverson
+
+    Copyright 2012 Jake Wharton
+    Copyright 2011 Patrik Åkerfeldt
+    Copyright 2011 Francisco Figueiredo Jr.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
