@@ -50,14 +50,13 @@ public class Flowlayout52 extends ViewGroup {
 	public Flowlayout52(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
-	// 测量 当前控件Flowlayout
+	// 测量当前控件Flowlayout
 	// 父类是有义务测量每个孩子的
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		// TODO Auto-generated method stub
-		//		MeasureSpec.EXACTLY;
-		//		MeasureSpec.AT_MOST;
-		//		MeasureSpec.UNSPECIFIED;
+		// MeasureSpec.EXACTLY;
+		// MeasureSpec.AT_MOST;
+		// MeasureSpec.UNSPECIFIED;
 		mLines.clear();
 		currentline=null;
 		useWidth=0;
@@ -71,13 +70,12 @@ public class Flowlayout52 extends ViewGroup {
 		childeWidthMode=widthMode==MeasureSpec.EXACTLY?MeasureSpec.AT_MOST:widthMode;
 		childeHeightMode=heightMode==MeasureSpec.EXACTLY?MeasureSpec.AT_MOST:heightMode;
 
-		int childWidthMeasureSpec=MeasureSpec.makeMeasureSpec(childeWidthMode,  width);
-		int childHeightMeasureSpec=MeasureSpec.makeMeasureSpec(childeHeightMode,  height);
+		int childWidthMeasureSpec=MeasureSpec.makeMeasureSpec(width, childeWidthMode);
+		int childHeightMeasureSpec=MeasureSpec.makeMeasureSpec(height, childeHeightMode);
 
 		currentline=new Line();// 创建了第一行
 		for(int i=0;i<getChildCount();i++)	{
 			View child=getChildAt(i);
-			System.out.println("孩子的数量:"+getChildCount());
 			// 测量每个孩子
 			child.measure(childWidthMeasureSpec, childHeightMeasureSpec);
 
@@ -108,7 +106,6 @@ public class Flowlayout52 extends ViewGroup {
 		}
 		totalheight+=verticalSpacing*(mLines.size()-1)+getPaddingTop()+getPaddingBottom();
 
-		System.out.println(totalheight);
 		setMeasuredDimension(width+getPaddingLeft()+getPaddingRight(),resolveSize(totalheight, heightMeasureSpec));
 	}
 
