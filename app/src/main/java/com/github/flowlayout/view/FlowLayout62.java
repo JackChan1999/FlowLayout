@@ -248,7 +248,7 @@ public class FlowLayout62 extends ViewGroup
 				// 判断是否有富余
 				if (widthAvg != 0)
 				{
-					// 改变宽度
+					// 改变宽度，View的长度改变了，需要重新measure
 					int newWidth = (int) (viewWidth + widthAvg + 0.5f);
 					int widthMeasureSpec = MeasureSpec.makeMeasureSpec(newWidth, MeasureSpec.EXACTLY);
 					int heightMeasureSpec = MeasureSpec.makeMeasureSpec(viewHeight, MeasureSpec.EXACTLY);
@@ -260,8 +260,7 @@ public class FlowLayout62 extends ViewGroup
 
 				// 布局
 				int left = currentLeft;
-				int top = (int) (offsetTop + (mHeigth - viewHeight) / 2 +
-							0.5f);
+				int top = (int) (offsetTop + (mHeigth - viewHeight) / 2 + 0.5f);
 				// int top = offsetTop;
 				int right = left + viewWidth;
 				int bottom = top + viewHeight;

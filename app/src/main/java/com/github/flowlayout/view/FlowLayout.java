@@ -230,12 +230,10 @@ public class FlowLayout extends ViewGroup {
 
                 // 判断是否有富余
                 if (widthAvg != 0) {
-                    // 改变宽度
+                    // 改变宽度，View的长度改变了，需要重新measure
                     int newWidth = (int) (viewWidth + widthAvg + 0.5f);
-                    int widthMeasureSpec = MeasureSpec.makeMeasureSpec(newWidth, MeasureSpec
-                            .EXACTLY);
-                    int heightMeasureSpec = MeasureSpec.makeMeasureSpec(viewHeight, MeasureSpec
-                            .EXACTLY);
+                    int widthMeasureSpec = MeasureSpec.makeMeasureSpec(newWidth, MeasureSpec.EXACTLY);
+                    int heightMeasureSpec = MeasureSpec.makeMeasureSpec(viewHeight, MeasureSpec.EXACTLY);
                     view.measure(widthMeasureSpec, heightMeasureSpec);
                     viewWidth = view.getMeasuredWidth();
                     viewHeight = view.getMeasuredHeight();
